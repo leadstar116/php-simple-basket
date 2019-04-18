@@ -33,6 +33,7 @@ Products Total
 - B01, B01, R01, R01, R01 $98.27
 
 What we expect to see –
+
 • A solution written in easy to understand and update PHP
 • A README file explaining how it works and any assumptions you’ve made
 • Pushed to a public Github repo
