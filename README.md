@@ -39,7 +39,7 @@ What we expect to see –
 • Pushed to a public Github repo
 
 
-Project Description.
+Project Solution.
 All comments exist on important line.
 I've made Basket class which contains addProduct, removeProduct, getProduct, getTotalCost functions and variables.
 Also used PHP session for saving Basket object.
