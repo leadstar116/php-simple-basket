@@ -38,3 +38,9 @@ What we expect to see –
 • A README file explaining how it works and any assumptions you’ve made
 • Pushed to a public Github repo
 
+
+Project Description.
+All comments exist on important line.
+I've made Basket class which contains addProduct, removeProduct, getProduct, getTotalCost functions and variables.
+Also used PHP session for saving Basket object.
+Basket works as really same as E commerce cart.
