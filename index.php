@@ -7,6 +7,20 @@
     }
 
     include_once("includes/header.php");
+    include_once("basket.php");
+
+    //get basket from session
+    $session_basket = file_get_contents('basket');
+    $products = array();
+    if(!empty($session_basket)){        
+        $basket = unserialize($session_basket);
+        $products = $basket->getProduct();
+    }    
+    $product_names = array(
+        'R01' => 'Red Widget',
+        'B01' => 'Blue Widget',
+        'G01' => 'Green Widget',
+    );
 ?>
 
 <body>
@@ -45,7 +59,15 @@
             <div class="col-md-3 text-center">
                 <span>Basket</span>
                 <ul class="add-list">
-                    
+                    <?php
+                        if(!empty($products)) {
+                            foreach($products as $product) {
+                                ?>
+                                <li type="<?= $product ?>"><?= $product_names[$product] ?>(<?= $product ?>)<a class="remove"><i class="fa fa-minus"></i></a></li>
+                                <?php
+                            }
+                        }
+                    ?>
                 </ul>
             </div>        
             <div class="col-md-9">
@@ -54,7 +76,7 @@
                         <a id="calculate" class="btn btn-primary"><span>Calculate</span></a>                
                     </div>
                     <div class="col-md-10">
-                        <p>aAaaa</p>
+                        <p id="totalCost"></p>
                     </div>
                 </div>
             </div>    
