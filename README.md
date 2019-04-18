@@ -44,3 +44,4 @@ All comments exist on important line.
 I've made Basket class which contains addProduct, removeProduct, getProduct, getTotalCost functions and variables.
 Also used PHP session for saving Basket object.
 Basket works as really same as E commerce cart.
+GetTotalCost function works based on initial offer and rules that you provided.
